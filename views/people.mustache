@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>People</title>
+  <link rel="stylesheet" href="/people.css">
+</head>
+
+<body>
+  <img src="{{avatar}}" , alt="">
+  <h2>{{name}}</h2>
+  {{#address.city}}
+    <p>{{address.city}}, {{address.country}}</p>
+  {{/address.city}}
+  {{#job}}
+    <p>{{job}}, {{company}}</p>
+  {{/job}}
+  {{^job}}
+  <p class="no-job">Available for hire</p>
+  {{/job}}
+  <p>{{email}}, {{phone}}</p>
+  {{#university}}
+    <p>Education {{university}}</p>
+  {{/university}}
+  <p>Skills {{skills}}</p>
+
+</body>
+
+</html>

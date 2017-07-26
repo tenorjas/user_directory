@@ -13,6 +13,14 @@ app.get("/", function(req, res) {
   res.render("directory-list", data);
 });
 
+app.get("/people/:username", (request, response) => {
+  let username = request.params.username;
+  let user = data.users.find(function(person) {
+    return person.username === username;
+  });
+  response.render("people", user);
+});
+
 app.listen(3000, function() {
   console.log("Successfully accessed user directory!");
 });

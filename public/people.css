@@ -8,8 +8,9 @@ body {
   align-items: center;
 }
 
-img {
-  float: left;
+.avatar_and_side_data {
+  display: flex;
+  flex-direction: row;
 }
 
 h2 {
@@ -18,10 +19,16 @@ h2 {
 }
 
 img {
-  border-radius: 5em;
+  padding: 10px;
+  border-radius: 6em;
   border-style: solid;
   border-width: thin;
   border-color: #666;
+  margin-top: 30px;
+}
+
+.side_data {
+  margin-left: 20px;
 }
 
 .no-job {

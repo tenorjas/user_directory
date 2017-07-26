@@ -36,5 +36,15 @@ img {
 }
 
 dt {
+  float: left;
   font-weight: bold;
+  text-align: right;
+  display: block;
+  width: calc(150px + 1.5em);
+  margin-bottom: 0.5em;
+}
+
+dd {
+  margin-left: calc(150px + 3em);
+  margin-bottom: 0.5em;
 }

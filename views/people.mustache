@@ -8,23 +8,33 @@
 </head>
 
 <body>
-  <img src="{{avatar}}" , alt="">
-  <h2>{{name}}</h2>
-  {{#address.city}}
-    <p>{{address.city}}, {{address.country}}</p>
-  {{/address.city}}
-  {{#job}}
-    <p>{{job}}, {{company}}</p>
-  {{/job}}
-  {{^job}}
-  <p class="no-job">Available for hire</p>
-  {{/job}}
-  <p>{{email}}, {{phone}}</p>
-  {{#university}}
-    <p>Education {{university}}</p>
-  {{/university}}
-  <p>Skills {{skills}}</p>
-
+  <div class="profile_wrapper">
+    <div class = "avatar"><img src="{{avatar}}" , alt=""></div>
+    <div class="side_data">
+    <h2>{{name}}</h2>
+    {{#address.city}}
+      <p>{{address.city}},
+    {{/address.city}}
+    {{address.country}} |
+    {{#job}}
+      {{job}}, {{company}}</p>
+    {{/job}}
+    {{^job}}
+    <span class="no-job">Available for hire</span>
+    {{/job}}
+    <p>{{email}} | {{phone}}</p>
+  </div>
+  <div class="ed_skills">
+    <dl>
+    {{#university}}
+      <dt>Education</dt>
+      <dd>{{university}}</dd>
+    {{/university}}
+    <dt>Skills</dt>
+    <dd>{{skills}}</dd>
+  </dl>
+  </div>
+  </div>
 </body>
 
 </html>
